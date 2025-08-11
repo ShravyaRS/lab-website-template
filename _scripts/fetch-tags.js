@@ -29,7 +29,7 @@
         const a = document.createElement("a");
         a.classList.add("tag");
         a.innerHTML = tag;
-        a.href = `${link}?search="tag: ${tag}"`;
+        a.href = `${link}?search=tag:${encodeURIComponent(tag)}`;
         a.dataset.tooltip = `Show items with the tag "${tag}"`;
         row.append(a);
       }
